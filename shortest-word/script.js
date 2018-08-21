@@ -1,12 +1,12 @@
-function findShort(s){
+function findShort(s) {
   var words = s.split(' ');
   var shortWordLength = words[0].length;
 
-  words.forEach(function(word) {
-    if(word.length < shortWordLength) {
-      shortWordLength = word.length;
+  for (var i = 0, wordsLength = words.length; i < wordsLength; i++) {
+  	if(words[i].length < shortWordLength) {
+      shortWordLength = words[i].length;
     }
-  });
+  }
 
   return shortWordLength;
 }
