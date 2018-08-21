@@ -1,12 +1,12 @@
 function findShort(s){
-  var shortestWordLength = 1000;
-  var arr = s.split(' ');
+  var words = s.split(' ');
+  var shortWordLength = words[0].length;
 
-  arr.forEach(function(word) {
-    if(word.length < shortestWordLength) {
-      shortestWordLength = word.length;
+  words.forEach(function(word) {
+    if(word.length < shortWordLength) {
+      shortWordLength = word.length;
     }
   });
 
-  return shortestWordLength;
+  return shortWordLength;
 }
