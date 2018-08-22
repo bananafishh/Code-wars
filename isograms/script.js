@@ -1,9 +1,7 @@
-function isIsogram(str){
-  var wordArr = str.toLowerCase().split('').sort();
-  for(var i = 0; i < wordArr.length; i++) {
-    if(wordArr[i] === wordArr[i + 1]) {
-      return false;
-    }
-  }
-  return true;
+function isIsogram(str) {
+  var letters = str.toLowerCase().split('').sort();
+
+  return letters.every(function(el, index, arr) {
+    return el !== arr[index + 1];
+  });
 }
