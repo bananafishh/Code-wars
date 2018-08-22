@@ -1,7 +1,5 @@
 function findShort(s) {
-  var words = s.split(' ').map(function(word) {
-    return word.length;
-  });
+  const words = s.split(' ').map(word => word.length);
   
   return Math.min.apply(Math, words);
 }
