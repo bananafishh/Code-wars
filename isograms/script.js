@@ -1,7 +1,5 @@
 function isIsogram(str) {
-  var letters = str.toLowerCase().split('').sort();
+  const letters = str.toLowerCase().split('').sort();
 
-  return letters.every(function(el, index, arr) {
-    return el !== arr[index + 1];
-  });
+  return letters.every((el, i, arr) => el !== arr[i + 1]);
 }
