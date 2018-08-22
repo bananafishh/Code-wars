@@ -3,3 +3,5 @@ function isIsogram(str) {
 
   return letters.every((el, i, arr) => el !== arr[i + 1]);
 }
+
+// TODO: изучить методы с regexp и Set
