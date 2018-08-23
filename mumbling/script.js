@@ -1,12 +1,12 @@
 function accum(s) {
-  var arr = s.toUpperCase().split('');
+  const arr = s.toLowerCase().split('');
 
-  var newArr = arr.map(function(el, i) {
-    var repeated = '';
-    var n = 0;
+  const newArr = arr.map((el, i) => {
+    let repeated = '';
+    let n = 0;
 
     while (n <= i) {
-      n === 0 ? repeated += el : repeated += el.toLowerCase();
+      repeated = (n === 0) ? repeated + el.toUpperCase() : repeated + el;
       n++;
     }
 
