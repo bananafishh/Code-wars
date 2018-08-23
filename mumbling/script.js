@@ -1,17 +1,16 @@
 function accum(s) {
   var arr = s.toUpperCase().split('');
-  var newArr = [];
 
-  arr.forEach(function(item, i) {
+  var newArr = arr.map(function(el, i) {
     var repeated = '';
     var n = 0;
 
     while (n <= i) {
-      n === 0 ? repeated += item : repeated += item.toLowerCase();
+      n === 0 ? repeated += el : repeated += el.toLowerCase();
       n++;
     }
 
-    newArr.push(repeated);
+    return repeated;
   });
 
   return newArr.join('-');
