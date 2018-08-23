@@ -1,24 +1,18 @@
 function accum(s) {
-  var arr = s.toLowerCase().split('');
-  var bigArr = [];
-  var joinedArr = [];
+  var arr = s.toUpperCase().split('');
+  var repeated = '';
+  var newArr = [];
 
   arr.forEach(function(item, i) {
-    bigArr.push(arr.slice(i, i + 1));
-  });
-
-  bigArr.forEach(function(item, i) {
-    item[0] = item[0].toUpperCase();
-
     var n = 0;
-    while (n < i) {
-      item.push(arr[i]);
+    while (n <= i) {
+      n === 0 ? repeated += item : repeated += item.toLowerCase();
       n++;
     }
 
-    joinedArr.push(item.join(''));
+    newArr.push(repeated);
+    repeated = '';
   });
 
-  var result = joinedArr.join('-');
-  return result;
+  return newArr.join('-');
 }
