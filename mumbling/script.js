@@ -1,7 +1,5 @@
 function accum(s) {
-  const arr = s.toLowerCase().split('');
-
-  const newArr = arr.map((el, i) => {
+  const arr = s.toLowerCase().split('').map((el, i) => {
     let repeated = '';
     let n = 0;
 
@@ -13,5 +11,5 @@ function accum(s) {
     return repeated;
   });
 
-  return newArr.join('-');
+  return arr.join('-');
 }
