@@ -1,14 +1,6 @@
 function accum(s) {
-  const arr = s.toLowerCase().split('').map((el, i) => {
-    let repeated = '';
-    let n = 0;
-
-    while (n <= i) {
-      repeated = (n === 0) ? repeated + el.toUpperCase() : repeated + el;
-      n++;
-    }
-
-    return repeated;
+  const arr = s.split('').map((el, i) => {
+    return el.toUpperCase() + el.toLowerCase().repeat(i);
   });
 
   return arr.join('-');
