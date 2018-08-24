@@ -1,5 +1,5 @@
 function comp(array1, array2){
-  if(array1 === null || array2 === null || array1 === undefined || array2 === undefined) {
+  if(!array1 || !array2 || array1.length !== array2.length) {
     return false;
   }
 
@@ -17,5 +17,5 @@ function comp(array1, array2){
 }
 
 function compare(a, b) {
- return a - b;
+  return a - b;
 }
