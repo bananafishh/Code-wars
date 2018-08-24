@@ -40,3 +40,5 @@ b = [121, 14641, 20736, 36100, 25921, 361, 20736, 361]
 
 If <code>a</code> or <code>b</code> are <code>null</code>, the problem doesn't make sense so return false.
 If <code>a</code> or <code>b</code> are empty the result is evident by itself.
+
+Уровень сложности **6kyu**.
