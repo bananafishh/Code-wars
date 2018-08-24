@@ -6,9 +6,7 @@ function comp(array1, array2){
   array1.sort(compare);
   array2.sort(compare);
 
-  return array1.every(function(el, i) {
-    return el * el === array2[i];
-  });
+  return array1.every((el, i) => el * el === array2[i]);
 }
 
 function compare(a, b) {
