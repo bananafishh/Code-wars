@@ -3,17 +3,12 @@ function comp(array1, array2){
     return false;
   }
 
-  var arrayLength = array1.length;
   array1.sort(compare);
   array2.sort(compare);
 
-  for(var i = 0; i < arrayLength; i++) {
-    if(Math.sqrt(array2[i]) !== array1[i]) {
-      return false;
-    }
-  }
-
-  return true;
+  return array1.every(function(el, i) {
+    return el * el === array2[i];
+  });
 }
 
 function compare(a, b) {
