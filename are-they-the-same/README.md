@@ -1,6 +1,6 @@
 # Are they the "same"?
 
-Given two arrays a and b write a function comp(a, b) that checks whether the two arrays have the "same" elements, with the same multiplicities. "Same" means, here, that the elements in b are the elements in a squared, regardless of the order.
+Given two arrays <code>a</code> and <code>b</code> write a function <code>comp(a, b)</code> that checks whether the two arrays have the "same" elements, with the same multiplicities. "Same" means, here, that the elements in <code>b</code> are the elements in <code>a</code> squared, regardless of the order.
 
 ## Valid arrays
 
