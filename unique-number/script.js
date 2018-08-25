@@ -1,15 +1,7 @@
 function findUniq(arr) {
-  arr.sort(compare);
+  arr.sort(function(a, b) {
+    return a - b;
+  });
 
-  for (var i = 0, arrLength = arr.length; i < arrLength; i++) {
-    if(arr[i] != arr[i + 1] && i == 0) {
-      return arr[i];
-    } else if(arr[i] != arr[i + 1] && i > 0) {
-      return arr[i + 1];
-    }
-  }
-}
-
-function compare(a, b) {
-  return a - b;
+  return (arr[0] == arr[1]) ? arr.pop() : arr[0];
 }
