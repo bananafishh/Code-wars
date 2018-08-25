@@ -1,19 +1,13 @@
 function cakes(recipe, available) {
-  cakesArr = [];
+  var cakes = [];
 
   for(var ingredient in recipe) {
     if(!available[ingredient]) {
       return 0;
     }
+
+    cakes.push(available[ingredient] / recipe[ingredient]);
   }
 
-  for(var ingredient in available) {
-    var cakes = available[ingredient] / recipe[ingredient];
-
-    if(cakes) {
-      cakesArr.push(cakes);
-    }
-  }
-
-  return Math.floor(Math.min.apply(Math, cakesArr));
+  return Math.floor(Math.min.apply(Math, cakes));
 }
