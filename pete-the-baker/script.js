@@ -1,5 +1,5 @@
 function cakes(recipe, available) {
-  recipeArr = [];
+  cakesArr = [];
 
   for(var ingredient in recipe) {
     if(!available[ingredient]) {
@@ -8,18 +8,12 @@ function cakes(recipe, available) {
   }
 
   for(var ingredient in available) {
-    if(!recipe[ingredient]) {
-      recipe[ingredient] = 0;
-    }
+    var cakes = available[ingredient] / recipe[ingredient];
 
-    var x = available[ingredient] / recipe[ingredient];
-    recipeArr.push(x);
+    if(cakes) {
+      cakesArr.push(cakes);
+    }
   }
 
-  var newArr = recipeArr.sort(compare);
-  return Math.floor(newArr[0]);
-}
-
-function compare(a, b) {
-  return a - b;
+  return Math.floor(Math.min.apply(Math, cakesArr));
 }
