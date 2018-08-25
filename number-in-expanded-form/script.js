@@ -1,24 +1,19 @@
 function expandedForm(num) {
-  var str = num.toString();
-  var strLength = str.length;
-  var strArr = str.split('');
-  var arr = [];
-  var res = [];
-  var mp = 1;
+  var arr = num.toString().split('').reverse();
+  var arrLength = arr.length;
+  var result = [];
+  var multiplier = 1;
+  var expandedNum;
 
-  for (var i = 0; i < strLength; i++) {
-    arr.push(mp);
-    mp *= 10;
-  }
+  for (var i = 0; i < arrLength; i++) {
+    expandedNum = arr[i] * multiplier;
 
-  var newArr = arr.reverse();
-
-  for (var i = 0; i < strLength; i++) {
-    var num = strArr[i] * newArr[i];
-    if(num) {
-      res.push(num);
+    if(expandedNum) {
+      result.push(expandedNum);
     }
+
+    multiplier *= 10;
   }
 
-  return res.join(' + ');
+  return result.reverse().join(' + ');
 }
