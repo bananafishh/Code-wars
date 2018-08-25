@@ -1,14 +1,13 @@
 function expandedForm(num) {
-  var arr = num.toString().split('').reverse();
-  var arrLength = arr.length;
-  var expandedNum;
-  var result = [];
+  const arr = num.toString().split('');
+  const result = [];
+  let expandedNum;
 
-  for (var i = 0; i < arrLength; i++) {
-    expandedNum = arr[i] * Math.pow(10, i);
+  for (let i = 0, arrLength = arr.length;  i < arrLength; i++) {
+    expandedNum = arr[i] * Math.pow(10, arrLength - i - 1);
 
     if(expandedNum) {
-      result.unshift(expandedNum);
+      result.push(expandedNum);
     }
   }
 
