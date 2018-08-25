@@ -1,5 +1,5 @@
 function cakes(recipe, available) {
-  var cakes = [];
+  const cakes = [];
 
   for(var ingredient in recipe) {
     if(!available[ingredient]) {
@@ -9,5 +9,5 @@ function cakes(recipe, available) {
     cakes.push(available[ingredient] / recipe[ingredient]);
   }
 
-  return Math.floor(Math.min.apply(Math, cakes));
+  return Math.floor(Math.min(...cakes));
 }
