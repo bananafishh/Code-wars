@@ -1,7 +1,7 @@
 function cakes(recipe, available) {
   const cakes = [];
 
-  for(var ingredient in recipe) {
+  for(let ingredient in recipe) {
     if(!available[ingredient]) {
       return 0;
     }
