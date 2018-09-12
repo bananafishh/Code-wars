@@ -1,3 +1,5 @@
+'use strict';
+
 function isIsogram(str) {
   const letters = str.toLowerCase().split('').sort();
 
