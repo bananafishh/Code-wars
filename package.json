@@ -1,0 +1,25 @@
+{
+  "name": "code-wars",
+  "version": "1.0.0",
+  "description": "Коллекция решенных задач с Code wars",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-htmlacademy": "^0.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.5.0"
+  },
+  "scripts": {
+    "test": "eslint **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bananafishh/Code-wars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bananafishh/Code-wars/issues"
+  },
+  "homepage": "https://github.com/bananafishh/Code-wars#readme"
+}
