@@ -1,22 +1,23 @@
-var sum_pairs = function(ints, s){
+'use strict';
+
+var sumPairs = function (ints, s) {
   var result = [];
-  var first;
-  var second = ints.length;
+  var firstIndex;
+  var secondIndex = ints.length;
 
-  for (var i = 0; i < ints.length; i++) {
+  for (var i = 0; i < ints.length - 1; i++) {
     for (var j = i + 1; j < ints.length; j++) {
-
-      if(ints[i] + ints[j] == s && j < second) {
-        first = i;
-        second = j;
+      if (ints[i] + ints[j] === s && j < secondIndex) {
+        firstIndex = i;
+        secondIndex = j;
       }
     }
   }
 
-  if(first === undefined) {
-    return;
+  if (firstIndex === undefined) {
+    return undefined;
   } else {
-    result.push(ints[first], ints[second]);
+    result.push(ints[firstIndex], ints[secondIndex]);
     return result;
   }
-}
+};
