@@ -16,5 +16,3 @@ function findUniq(arr) {
 
   return uniqueNumber;
 }
-
-console.log(findUniq([1, 1, 1, 2, 1, 1]));
